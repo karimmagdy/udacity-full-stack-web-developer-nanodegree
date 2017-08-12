@@ -1,0 +1,28 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+* {
+   outline: 1px solid blue !important;
+}
+
+.app {
+    display: -webkit-flex;
+    display: flex;
+}
+
+.app {
+
+    display: flex;
+}
+
+.image {
+    max-width: 60px;
+}
+
+.description {
+    max-width: 705px;
+}

@@ -1,0 +1,18 @@
+<div class="navbar navbar-static-top navbar-inverse">
+  <div class="navbar-inner">
+    <div class="container">
+      <p class="navbar-brand"><b>Catalog App</b></p>
+      <ul class="nav navbar-nav navbar-right">
+        {%if 'username' not in session %}
+        <form action="{{url_for('showLogin')}}">
+          <input class="btn btn-danger navbar-btn" type="submit" value="Login" />
+        </form>
+        {% else %}
+        <form action="{{url_for('disconnect')}}">
+          <input class="btn btn-danger navbar-btn" type="submit" value="Logout" />
+        </form>
+        {% endif %}
+      </ul>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,26 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "header.html" %}
+<div class="container white" >
+  <h3 class="cat"><b>Edit Item</b></h3>
+  <ul class="nav">
+    <form action="#" method = "post">
+        <div class="form-group">
+            <label for="name">Title:</label>
+            <input type ="text" maxlength="50" class="form-control" name="name"value="{{item.name}}"><br>
+
+            <label for="description">Description:</label>
+            <textarea class="form-control" maxlength="250" rows="3" name="description" >{{item.description}}</textarea><br>
+
+            <label for="category">Category:</label><br>
+            <select name="category">
+            {% for cat in categories %}
+            <option value="{{ cat.id }}">{{ cat.name }}</option>
+            {% endfor %}
+            </select><br><br>
+            <input class="btn btn-danger navbar-btn" type="submit" value="Edit" />
+        </div>
+    </form>
+  </ul>
+</div>
+{% endblock %}
